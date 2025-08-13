@@ -19,7 +19,7 @@ export function SocketProvider({ children }) {
   useEffect(() => {
     if (isAuthenticated && user) {
       // Initialize socket connection
-      const socketUrl = import.meta.env.VITE_SOCKET_URL || 'http://localhost:5003';
+      const socketUrl = import.meta.env.VITE_SOCKET_URL || 'https://clickup-alternative.onrender.com';
       const newSocket = io(socketUrl, {
         auth: {
           token: localStorage.getItem('token'),
